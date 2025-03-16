@@ -1,6 +1,6 @@
 package feu3.state
 
-data class Feu3State(
+data class Feu3StateV1(
     var rouge: Boolean = true,
     var orange: Boolean = false,
     var vert: Boolean = false,

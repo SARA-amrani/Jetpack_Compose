@@ -42,8 +42,8 @@ fun MainActivityFeu3View(viewmodel: Feu3ViewModel = viewModel()) {
         }
 
         // Affichage de la deuxième et troisième vue
-        Feu3ViewV2(state, modifier = Modifier.padding(16.dp))
-        Feu3ViewV3(state, modifier = Modifier.padding(16.dp))
+       // Feu3ViewV2(state, modifier = Modifier.padding(16.dp))
+       // Feu3ViewV3(state, modifier = Modifier.padding(16.dp))
     }
 
 }
@@ -62,7 +62,7 @@ fun Feu3ViewV1(state: Feu3State, modifier: Modifier = Modifier) {
 }
 
 // une deuxsième visualisation
-@Composable
+/*@Composable
 fun Feu3ViewV2(state:Feu3State,modifier:Modifier=Modifier){
     Column(
         modifier.wrapContentSize()
@@ -71,7 +71,7 @@ fun Feu3ViewV2(state:Feu3State,modifier:Modifier=Modifier){
         Row(Modifier.align(Alignment.Start).padding(horizontal=16.dp)){
             RadioButton(
                 selected=state.rouge,
-                onClick= { state.rouge = !state.rouge }  //non réactif
+                onClick= { viewModel.state = state.copyChangeCouleur(FeuCouleur.ROUGE) }  //non réactif
             )
             Text(
                 text="Rouge",
@@ -81,22 +81,22 @@ fun Feu3ViewV2(state:Feu3State,modifier:Modifier=Modifier){
         //feu vert
         Row(Modifier.align(Alignment.Start).padding(horizontal=16.dp)){
             RadioButton(
-                selected=state.vert,
-                onClick= { state.vert = !state.vert }  //non réactif
+                selected=state.orange,
+                onClick= { state = state.copyChangeCouleur(FeuCouleur.ORANGE) }  //non réactif
             )
             Text(
-                text="Vert",
+                text="Orange",
                 modifier=Modifier.padding(start=16.dp)
             )
         }
         //feu orange
         Row(Modifier.align(Alignment.Start).padding(horizontal=16.dp)){
             RadioButton(
-                selected=state.orange,
-                onClick= { state.orange = !state.orange } //non réactif
+                selected=state.vert,
+                onClick= {  state = state.copyChangeCouleur(FeuCouleur.VERT)} //non réactif
             )
             Text(
-                text="Orange",
+                text="VERT",
                 modifier=Modifier.padding(start=16.dp)
             )
         }
@@ -147,4 +147,4 @@ fun Feu3ViewV3Preview() {
     Feu3ViewV3(state = Feu3State(false, true, false))  // pour la V1
 
 //Feu3ViewV3(state = Feu3State(FeuCouleur.ORANGE)) // pour la V2
-}
+} */
