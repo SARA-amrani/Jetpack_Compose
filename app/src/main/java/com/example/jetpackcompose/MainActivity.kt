@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import carrefour.ui.MainActivityCarrefourView
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 import feu3.ui.MainActivityFeu3View
 
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     modifier=Modifier.fillMaxSize(),
                     color= MaterialTheme.colorScheme.background
                 ){
-                    MainActivityFeu3View()
+                    MainActivityCarrefourView()
                 }
             }
         }
