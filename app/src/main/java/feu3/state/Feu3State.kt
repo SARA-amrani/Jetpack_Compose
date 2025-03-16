@@ -1,9 +1,9 @@
 package feu3.state
 
 data class Feu3State(
-    val rouge: Boolean = true,
-    val orange: Boolean = false,
-    val vert: Boolean = false,
+    var rouge: Boolean = true,
+    var orange: Boolean = false,
+    var vert: Boolean = false,
 ) {
     val nomCouleur: String
         get() =
