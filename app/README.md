@@ -1,4 +1,4 @@
-Jetpack Compose
+# Jetpack Compose
 
 ![Mon image](./logo.png)
 
@@ -7,16 +7,16 @@ L’objectif du TP est de découvrir la nouvelle API Android appelée Jetpack Co
 qui est recommandée par Google. 
 
 
-## Partie 1 : Découverte de Compose
+## 1. Découverte de Compose
 
-# 1.1. Structure d’une activité & Paramétrage de l’apparence
+### 1.1. Structure d’une activité & Paramétrage de l’apparence
 image 1
 
-# 1.2. Fonctions composables personnelles & Prévisualisation
+### 1.2. Fonctions composables personnelles & Prévisualisation
 Important Les fonctions composables sont placées à part, en dehors de la classe d’activité.
 
 image 2
-# 1.3. Structure d’une interface
+### 1.3. Structure d’une interface
 Note : Il n’y a pas de virgule ou autre séparateur entre les appels à Text(...) car ce sont des appels de fonctions successifs, 
 similaires à deux printf successifs. Cependant, dans ce cas, nous n'avons pas spécifié de détails concernant la façon dont ces textes doivent être disposés à l'écran.
 
@@ -32,12 +32,12 @@ iamge 5
 ElevatedCard
 image 6
 
-1.6. Paramétrage des vues
+### 1.4. Paramétrage des vues
 Dans l’exemple précédent, la fonction ElevatedCard produit une mise en page minimale, taille minimale, pas de marges, etc. Heureusement, cette fonction est paramétrable.
 image7
 image8
 
-2. Modèle et vue
+## 2. Modèle et vue
 
 Une fonction composable n’est pas un simple bout de code qui a che quelque chose. Une telle fonction possède une signification allant au delà :
 «Une fonction composable est destinée à convertir ses paramètres en interface utilisateur.» (ref)
@@ -57,17 +57,18 @@ image 10
 Il n’est pas du tout imposé de rendre visibles tous les paramètres fournis. La fonction précédente
 ne salue que les personnes dont le nom commence par j.
 
-3. Feu tricolore
+## 3. Feu tricolore
 
 On va prendre un projet simple consistant à dessiner un feu tricolore (vert, orange, rouge) et avoir
 un bouton pour le faire changer d’état.
 
-3.1. État
+### 3.1. État
 Une idée simple, c’est d’utiliser trois booléens, un par couleur. Évidemment, on peut faire
 autrement, par exemple avec un entier ou un enum qui code le feu qui est allumé.
 
-3.2. Vue :  C’est une visualisation très simple pour le feu tricolore.
-3.3. Contrôleur(viewmodel)
+### 3.2. Vue 
+C’est une visualisation très simple pour le feu tricolore.
+### 3.3. Contrôleur(viewmodel)
 C’est cette classe qui a la responsabilité de modifier l’état lorsqu’il y a un événement. Par exemple,
 si l’utilisateur appuie sur le bouton changer  alors ça appelle
 la méthode suivant(). Cette méthode a ecte state avec une nouvelle valeur, en fonction de
@@ -76,12 +77,12 @@ coup. Jamais on ne modifie les variables membres (de toutes façons, ce sont des
 
 image 11 12 13 14
 
-3.5. Autres visualisations
+### 3.5. Autres visualisations
 La séparation entre modèle et vue permet de créer d'autres visualisations pour les mêmes données.
 
 iamge 15 16 17
 
-4. Carrefour
+## 4. Carrefour
    
 On voudrait maintenant a cher un carrefour avec plusieurs feux, et des règles de gestion pour
    qu’ils aient les bonnes couleurs. Pour simplifier, ça sera un carrefour en croix avec deux routes à
