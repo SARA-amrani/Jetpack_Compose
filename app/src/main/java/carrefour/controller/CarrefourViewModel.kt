@@ -4,7 +4,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import carrefour.state.CarrefourState
 import feu3.state.Feu3StateV2
-import carrefour.state.*
 
 class CarrefourViewModel:ViewModel(){
     //singleton contenant l'état,observable mais privé
