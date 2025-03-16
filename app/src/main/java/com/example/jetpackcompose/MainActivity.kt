@@ -44,34 +44,26 @@ class MainActivity : ComponentActivity() {
         }
         //setContent(null,{Text("OK")})
 
-        setContent {
+     /*   setContent {
             Accueil(name = "numéro 6")
-        }
+        } */
 
     }
 
 }
 
 @Composable
-fun Accueil(name:String,modifier:Modifier=Modifier){
-    ElevatedCard{
-        Column(
-            modifier=modifier.padding(8.dp),
-            horizontalAlignment=Alignment.CenterHorizontally
-        ){
-            Text(
-                text="Bonjour $name",
-                fontSize=20.sp,
-                modifier=Modifier.padding(12.dp))
-            Text(text="Je vois de grands progrès",color=Color.Blue)
+fun AccueilMultipleSeulementJ(names: List<String>) {
+    Column {
+        for (name in names) {
+            if (name.startsWith("j")) {
+                Text(text = "Bonjour $name !",modifier=Modifier.padding(4.dp))
+            }
         }
     }
 }
 @Preview
 @Composable
-fun AccueilPreview(){
-    Column{
-        Accueil(name="numéro 10",modifier=Modifier.fillMaxWidth())
-        Accueil(name="numéro 6") //valeurpardéfautdumodifier
-    }
+fun AccueilMultipleSeulementJPreview() {
+    AccueilMultipleSeulementJ(listOf("paul", "jean", "pierre", "jacques"))
 }
