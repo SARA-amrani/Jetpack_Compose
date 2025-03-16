@@ -59,7 +59,7 @@ On a un modèle de données : la liste passée en paramètre. La fonction l’af
 La fonction peut quand même dérouler un algorithme, mais qui ne change pas les données à l’extérieur.
 Cet algorithme doit être répétable. Un second appel de la même fonction avec les mêmes paramètres doit produire exactement le même a chage.
 
-![Logo](https://raw.githubusercontent.com/SARA-amrani/Jetpack_Compose/main/app/screenshots/image10.png)
+![Logo](https://raw.githubusercontent.com/SARA-amrani/Jetpack_Compose/main/app/screenshots/iamge10.png)
 
 Il n’est pas du tout imposé de rendre visibles tous les paramètres fournis.
 La fonction précédente ne salue que les personnes dont le nom commence par j.
