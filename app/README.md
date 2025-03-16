@@ -1,6 +1,6 @@
 # Jetpack Compose
 
-![Mon image](./logo.png)
+![Image de mon projet](./screenshots/logo.png)
 
 
 L’objectif du TP est de découvrir la nouvelle API Android appelée Jetpack Compose. C’est celle
@@ -10,12 +10,14 @@ qui est recommandée par Google.
 ## 1. Découverte de Compose
 
 ### 1.1. Structure d’une activité & Paramétrage de l’apparence
-image 1
+
+![Image de mon projet](./screenshots/image1.png)
 
 ### 1.2. Fonctions composables personnelles & Prévisualisation
 Important Les fonctions composables sont placées à part, en dehors de la classe d’activité.
 
-image 2
+![Image de mon projet](./screenshots/image2.png)
+
 ### 1.3. Structure d’une interface
 Note : Il n’y a pas de virgule ou autre séparateur entre les appels à Text(...) car ce sont des appels de fonctions successifs, 
 similaires à deux printf successifs. Cependant, dans ce cas, nous n'avons pas spécifié de détails concernant la façon dont ces textes doivent être disposés à l'écran.
