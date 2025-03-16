@@ -58,47 +58,60 @@ On a un modèle de données : la liste passée en paramètre. La fonction l’af
 La fonction peut quand même dérouler un algorithme, mais qui ne change pas les données à l’extérieur. 
 Cet algorithme doit être répétable. Un second appel de la même fonction avec les mêmes paramètres doit produire exactement le même a chage.
 
-![Image de mon projet](./screenshots/image10.png)
+![Image de mon projet](./screenshots/iamge10.png)
 
-Il n’est pas du tout imposé de rendre visibles tous les paramètres fournis. La fonction précédente
-ne salue que les personnes dont le nom commence par j.
+Il n’est pas du tout imposé de rendre visibles tous les paramètres fournis. 
+La fonction précédente ne salue que les personnes dont le nom commence par j.
 
 ## 3. Feu tricolore
 
-On va prendre un projet simple consistant à dessiner un feu tricolore (vert, orange, rouge) et avoir
-un bouton pour le faire changer d’état.
+On va prendre un projet simple consistant à dessiner un feu tricolore (vert, orange, rouge) et avoir un bouton pour le faire changer d’état.
 
 ### 3.1. État
-Une idée simple, c’est d’utiliser trois booléens, un par couleur. Évidemment, on peut faire
-autrement, par exemple avec un entier ou un enum qui code le feu qui est allumé.
+Une idée simple, c’est d’utiliser trois booléens, un par couleur. Évidemment, on peut faire autrement, par exemple avec un entier ou un enum qui code le feu qui est allumé.
 
 ### 3.2. Vue 
 C’est une visualisation très simple pour le feu tricolore.
 ### 3.3. Contrôleur(viewmodel)
-C’est cette classe qui a la responsabilité de modifier l’état lorsqu’il y a un événement. Par exemple,
-si l’utilisateur appuie sur le bouton changer  alors ça appelle
-la méthode suivant(). Cette méthode a ecte state avec une nouvelle valeur, en fonction de
-l’état actuel : du feu rouge on passe au feu vert, etc. À chaque fois, on réa ecte tout l’état d’un
-coup. Jamais on ne modifie les variables membres (de toutes façons, ce sont des constantes).
+C’est cette classe qui a la responsabilité de modifier l’état lorsqu’il y a un événement. 
+Par exemple, si l’utilisateur appuie sur le bouton changer  alors ça appelle la méthode suivant(). 
+Cette méthode affecte state avec une nouvelle valeur, en fonction de l’état actuel : du feu rouge on passe au feu vert, etc. 
+À chaque fois, on réaffecte tout l’état d’un coup. 
+Jamais on ne modifie les variables membres (de toutes façons, ce sont des constantes).
 
-image 11 12 13 14
+![Image de mon projet](./screenshots/image11.png)
+![Image de mon projet](./screenshots/image12.png)
+![Image de mon projet](./screenshots/image13.png)
+![Image de mon projet](./screenshots/image14.png)
+
 
 ### 3.5. Autres visualisations
 La séparation entre modèle et vue permet de créer d'autres visualisations pour les mêmes données.
 
-iamge 15 16 17
+![Image de mon projet](./screenshots/image15.png)
+![Image de mon projet](./screenshots/image16.png)
+![Image de mon projet](./screenshots/image17.png)
 
 ## 4. Carrefour
    
-On voudrait maintenant a cher un carrefour avec plusieurs feux, et des règles de gestion pour
-   qu’ils aient les bonnes couleurs. Pour simplifier, ça sera un carrefour en croix avec deux routes à
-   angle droit, 4 feux dont un seul est vert, puis orange à un instant donné.
+On voudrait maintenant afficher un carrefour avec plusieurs feux, et des règles de gestion pour qu’ils aient les bonnes couleurs. 
+Pour simplifier, ça sera un carrefour en croix avec deux routes à angle droit, 4 feux dont un seul est vert, puis orange à un instant donné.
    
-Le principe est d’avoir un feu «courant» qui passe au vert, pendant que tous les autres sont
-   rouges. Ce feu passe ensuite à l’orange, les autres restent rouges. Enfin il passe au rouge, les
-   autres restant encore au rouge à ce stade, mais ce dernier changement fait passer au feu suivant.
+Le principe est d’avoir un feu «courant» qui passe au vert, pendant que tous les autres sont rouges. 
+Ce feu passe ensuite à l’orange, les autres restent rouges. Enfin il passe au rouge, les autres restant encore au rouge à ce stade, mais ce dernier changement fait passer au feu suivant.
    
 Techniquement, on va faire cela dans la même application, mais des packages di érents.
 
 NB: on conserve évidemment tout ce qui concerne les feux tricolores.
+
+![Image de mon projet](./screenshots/image18.png)
+![Image de mon projet](./screenshots/image19.png)
+![Image de mon projet](./screenshots/image20.png)
+
+### Conclusion générale du TP sur Jetpack Compose
+Ce TP sur Jetpack Compose nous a permis de découvrir un cadre moderne et puissant pour la création d'interfaces utilisateur sur Android. 
+Jetpack Compose, en tant que bibliothèque déclarative, simplifie et modernise le développement d'UI, en remplaçant le traditionnel XML par du code Kotlin. 
+Grâce à cette approche, l'UI devient plus flexible, réactive et facile à maintenir.
+
+### FIN 
 
